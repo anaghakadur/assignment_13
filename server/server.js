@@ -19,7 +19,9 @@ var Product = mongoose.model('product', {
     id : Number
 });
 
-mongoose.connect(dbPath, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false}, (err) => {
+mongoose.set('strictQuery', false);
+
+mongoose.connect(dbPath, (err) => {
     console.log("Mongodb connection", err);
 });
 
