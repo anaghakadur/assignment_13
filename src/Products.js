@@ -32,7 +32,7 @@ class Products extends Component {
 
     handleSave(product) {
         product.productid = new Date().getTime()
-        product.instock = true;
+      
         this.setState((prevState) => {
             let products = prevState.products
             products[product.productid] = product
